@@ -2,10 +2,12 @@
 
 $finder = Symfony\Component\Finder\Finder::create()
     ->in([
-        __DIR__ . '/src',
         __DIR__ . '/tests',
     ])
+    ->in(__DIR__)
+    ->exclude(['bootstrap', 'storage', 'vendor','docker'])
     ->name('*.php')
+    ->name('_ide_helper')
     ->notName('*.blade.php')
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);

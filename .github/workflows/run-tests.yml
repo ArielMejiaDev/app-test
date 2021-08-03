@@ -47,7 +47,7 @@ jobs:
                 php artisan key:generate
             - name: Create Database
               run: |
-                mkdir -p database
+                mkdir -f database
                 touch -f database/database.sqlite
             - name: Execute tests
               env:

@@ -52,5 +52,4 @@ jobs:
             - name: Execute tests
               env:
                 APP_ENV: testing
-                DB_CONNECTION: sqlite
               run: vendor/bin/phpunit

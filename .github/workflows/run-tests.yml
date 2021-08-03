@@ -45,13 +45,5 @@ jobs:
               run: |
                 cp .env.example .env
                 php artisan key:generate
-            - name: Create Database
-              run: |
-                mkdir -parents database
-                touch -f database/database.sqlite
             - name: Execute tests
-              env:
-                APP_ENV: testing
-                DB_CONNECTION: sqlite
-                DB_DATABASE: database/database.sqlite
               run: vendor/bin/phpunit

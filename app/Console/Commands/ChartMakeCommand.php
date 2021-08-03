@@ -35,6 +35,7 @@ class ChartMakeCommand extends GeneratorCommand
     public function handle(): ?bool
     {
         $this->askChartType();
+
         return parent::handle();
     }
 
